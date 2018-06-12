@@ -4,9 +4,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: path.join(__dirname, "src/index.tsx"),
-    // resolve: {
-    //     extensions: [".tsx"] // Allow to omit extension when importing file
-    // },
     output: {
         path: path.join(__dirname, "dist"),
         filename: "main.js"
@@ -15,10 +12,13 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         hot: true
     },
-
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"]
+    },
+    devtool: "inline-source-map",
     module: {
         rules: [
-            { test: /\.tsx$/, exclude: /node_modules/, use: { loader: "babel-loader" } },
+            { test: /\.tsx$/, exclude: /node_modules/, use: { loader: "ts-loader" } },
             { test: /\.css$/, use: ["style-loader", "css-loader"] }
         ]
     },
