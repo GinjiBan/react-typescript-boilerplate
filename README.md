@@ -10,4 +10,4 @@ Features :
 - Generic Prettier config
 
 
-For SSR support see : [Universal React Typescript Boilerplate](https://github.com/thibautsabot/universal-react-typescript-boilerplate)
+For SSR support see : [Universal React Typescript Skeleton](https://github.com/thibautsabot/universal-react-app-skeleton)
